@@ -1,0 +1,91 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 字体 */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; /* 页面背景色 */
+    color: #333; /* 主要文字颜色 */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* 内容最大宽度 */
+    margin: 40px auto; /* 居中 */
+    padding: 20px;
+    background: #fff; /* 内容区背景色 */
+    border-radius: 12px; /* 圆角 */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 阴影 */
+    text-align: center;
+}
+
+header h1 {
+    color: #2c3e50; /* 标题颜色 */
+    margin-bottom: 30px;
+}
+
+/* 按钮网格布局 */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 两列布局 */
+    gap: 15px; /* 按钮间距 */
+    margin-bottom: 30px;
+}
+
+/* 基础按钮样式 */
+.button {
+    display: block;
+    padding: 15px 20px;
+    background-color: #3498db; /* 按钮默认背景色 */
+    color: white !important; /* 按钮文字颜色 */
+    text-decoration: none;
+    border-radius: 8px; /* 按钮圆角 */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* 鼠标悬停时的效果 */
+.button:hover {
+    background-color: #2980b9; /* 悬停时变深 */
+    transform: translateY(-2px); /* 轻微上浮 */
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* “必看须知”按钮的特殊样式 */
+.button.primary {
+    background-color: #e74c3c; /* 醒目的红色 */
+    grid-column: 1 / span 2; /* 横跨两列 */
+}
+.button.primary:hover {
+    background-color: #c0392b;
+}
+
+/* “客服微信”按钮的特殊样式 */
+.button.contact {
+    background-color: #27ae60; /* 绿色 */
+    grid-column: 1 / span 2; /* 横跨两列 */
+}
+.button.contact:hover {
+    background-color: #219653;
+}
+
+footer {
+    margin-top: 30px;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* 响应式设计：在小屏幕上变为一列 */
+@media (max-width: 600px) {
+    .button-grid {
+        grid-template-columns: 1fr;
+    }
+    .button.primary,
+    .button.contact {
+        grid-column: 1;
+    }
+}
